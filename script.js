@@ -17,13 +17,28 @@ $(document).ready(function () {
 	$('#password-length, #password-range').on('input', function (e) {
 		gen_pass()
 	})
-	$('#reGenBrn').on('click', function (e) {
+	$('#reGenBtn').on('click', function (e) {
+		gen_pass()
+	})
+	$(".pass-part").on('change', function() {
+		if ($('.pass-part:checked').length === 0) {
+			$(this).prop('checked', true);
+		}
 		gen_pass()
 	})
 
 	function gen_pass() {
 		const length = parseInt($('#password-length').val()) || 8;
-		const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+';
+		var charset = '';
+
+		$('.pass-part').each(function (i, element) {
+			if ($(element).prop('checked')) {
+				charset += $(element).data('val')
+			}
+		});
+
+		console.log(charset.length)
+
 		let password = '';
 		
 		for (let i = 0; i < length; i++) {

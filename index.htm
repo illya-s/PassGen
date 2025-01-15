@@ -13,9 +13,9 @@
 		<h1>Password Generator</h1>
 
 		<div class="password-length-wrapper">
-			<input type="number" id="password-length" min="1" max="92" placeholder="00" />
-			<input type="range" id="password-range" min="1" max="92" value="8">
-			<button id="reGenBrn">
+			<input type="number" id="password-length" min="1" max="99" placeholder="00" />
+			<input type="range" id="password-range" min="1" max="99" value="8">
+			<button class="regenerate-btn" id="reGenBtn">
 				<svg width="513" height="513" viewBox="0 0 513 513" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_309_2)">
 						<path d="M2 118.429C32.7953 87.1298 63.5459 56.2146 94.4206 25.4239C101.223 18.6405 110.643 18.7324 117.6 25.401C124.214 31.7408 130.657 38.2636 137.05 44.827C144.397 52.3682 144.435 61.6181 137.084 69.126C130.818 75.525 124.334 81.7099 116.92 88.9989C120.005 88.9989 121.734 88.9989 123.463 88.9989C215.766 88.9989 308.069 88.9679 400.373 89.011C453.202 89.0357 496.952 122.702 510.44 173.632C511.583 177.947 512.325 182.368 513.626 186.87C514 193.355 514 199.709 514 206.532C513.839 207.044 513.569 207.046 513.534 207.139C507.941 221.616 496.77 226.254 482.195 225.021C477.9 224.658 473.475 225.068 469.302 224.2C457.509 221.748 450.202 212.451 449.999 200.396C449.55 173.797 428.398 153.009 401.724 153.006C308.894 152.995 216.064 153.001 123.234 153.001C121.634 153.001 120.034 153.001 117.116 153.001C123.933 159.767 129.92 165.662 135.855 171.608C144.908 180.677 144.892 189.323 135.834 198.421C130.072 204.208 124.328 210.015 118.5 215.735C110.506 223.581 101.405 223.606 93.4836 215.701C64.346 186.623 35.2529 157.501 6.16581 128.372C4.8818 127.087 3.82216 125.577 2.329 124.086C2 122.286 2 120.571 2 118.429Z" fill="white"/>
@@ -28,6 +28,25 @@
 						</defs>
 				</svg>
 			</button>
+		</div>
+
+		<div class="pass-conttent-edit-wrapper">
+			<label class="pass-upper pass-cont-inp">
+				<input class="pass-part" type="checkbox" name="uppercase" data-val="ABCDEFGHIJKLMNOPQRSTUVWXYZ" checked>
+				<p>Uppercase</p>
+			</label>
+			<label class="pass-lower pass-cont-inp">
+				<input class="pass-part" type="checkbox" name="lowercase" data-val="abcdefghijklmnopqrstuvwxyz" checked>
+				<p>Lowercase</p>
+			</label>
+			<label class="pass-nums pass-cont-inp">
+				<input class="pass-part" type="checkbox" name="numbers" data-val="0123456789" checked>
+				<p>Numbers</p>
+			</label>
+			<label class="pass-symb pass-cont-inp">
+				<input class="pass-part" type="checkbox" name="symbols" data-val="?!;:.,/|\[]{}@-_#$%^&*()_+~" checked>
+				<p>Symbols</p>
+			</label>
 		</div>
 
 		<div class="pass-cont">

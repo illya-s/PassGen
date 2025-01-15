@@ -33,7 +33,7 @@ body {
 
 .password-length-wrapper {
 	display: grid;
-	grid-template-columns: 75px auto;
+	grid-template-columns: 40px auto 40px;
 	gap: 1rem;
 }
 
@@ -60,11 +60,34 @@ button:hover {
 	background: #0056b3;
 }
 
+.regenerate-btn {
+	padding: 5px;
+
+	display: grid;
+	aspect-ratio: 1;
+	place-content: center;
+}
+.regenerate-btn > svg {
+	width: 100%; height: 100%;
+}
+
 
 input[type="number"] {
 	appearance: none;
 	-webkit-appearance: textfield;
+
+	text-align: center;
 }
+
+
+.pass-cont-inp {
+	display: grid;
+	grid-template-columns: max-content auto;
+	gap: 1rem;
+
+	user-select: none;
+}
+
 
 .pass-cont {
 	display: grid;
