@@ -1,21 +1,7 @@
 $(document).ready(function() {
 	const diceSide = $('.side');
 	const rollButton = $('#rollButton');
-	const diceNumber = $('#diceNumber');
 	let interval;
-
-	// $('#rollButton').click(function() {
-	// 	var int = Math.floor(Math.floor(Math.random() * 6))
-
-	// 	diceSide.each(function (i, element) {
-	// 		if (i == int) {
-	// 			$(this).css('display', 'grid')
-	// 		} else {
-	// 			$(this).css('display', 'none')
-	// 		}
-	// 	});
-		
-	// });
 
 
 	rollButton.click(function() {
