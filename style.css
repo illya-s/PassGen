@@ -1,14 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	font-family: sans-serif;
-	background-color: #f4f4f9;
-	padding: 20px;
-}
-
 .container {
 	position: absolute;
 	inset: 50% 50% auto auto;
@@ -37,6 +26,12 @@ body {
 	gap: 1rem;
 }
 
+.pass-conttent-edit-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+}
+
 
 input, button {
 	padding: 10px;
@@ -50,14 +45,46 @@ input {
 	color: #000;
 }
 
+input[type='checkbox'] {
+	appearance: none;
+	-webkit-appearance: none;
+
+	width: 20px;
+	height: 20px;
+
+	outline: none;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: white;
+
+	cursor: pointer;
+
+	transition: all .2s ease;
+
+	&:checked {
+		background-color: #191F25;
+		border-color: #191F25;
+	}
+	&:checked::after {
+		content: "✓";
+		color: white;
+		font-size: 16px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	}
+}
+
 button {
 	border: none;
-	background-color: #007bff;
+	background-color: #191F25;
 
 	color: #FFF;
 }
 button:hover {
-	background: #0056b3;
+	background: #191F25;
 }
 
 .regenerate-btn {
@@ -75,8 +102,18 @@ button:hover {
 input[type="number"] {
 	appearance: none;
 	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
 
 	text-align: center;
+
+	&::-ms-clear {
+		display: none;
+	}
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
 }
 
 

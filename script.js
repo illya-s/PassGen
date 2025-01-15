@@ -37,8 +37,6 @@ $(document).ready(function () {
 			}
 		});
 
-		console.log(charset.length)
-
 		let password = '';
 		
 		for (let i = 0; i < length; i++) {
